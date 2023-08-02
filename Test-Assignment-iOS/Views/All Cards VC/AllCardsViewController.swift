@@ -33,6 +33,7 @@ final class AllCardsViewController: UIViewControllerWithCoordinator {
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.isScrollEnabled = true
+        tableView.allowsMultipleSelection = false
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
         return tableView
     }()
@@ -56,8 +57,12 @@ final class AllCardsViewController: UIViewControllerWithCoordinator {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.fetchDataFromDB()
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.fetchDataFromDB()
     }
 
 }
@@ -103,7 +108,7 @@ extension AllCardsViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: MainCardsTableViewCell.reuseIdentifier, for: indexPath) as! MainCardsTableViewCell
         cell.selectionStyle = .none
-
+        
         cell.config(card: self.cards[indexPath.row])
         return cell
     }
@@ -111,8 +116,11 @@ extension AllCardsViewController: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        guard let coordinator = self.coordinator else { return }
-//        coordinator.openVCWithoutStoryboard(type: )
+        let cell = tableView.cellForRow(at: indexPath) as! MainCardsTableViewCell
+        cell.isSelected = true
+        
+        guard let coordinator = self.coordinator else { return }
+        coordinator.openVCWithoutStoryboardWithParams(type: CardDetailsViewController.self, params: ["card": self.cards[indexPath.row]] )
         
     }
     

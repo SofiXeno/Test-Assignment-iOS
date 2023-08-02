@@ -63,32 +63,21 @@ final class CardModel {
     
     
     func maskCardNumberForTable() -> String? {
+       
+        let lastFour = String(" \(self.cardNumber.suffix(4))")
+        let splittedCardNumber = self.cardNumber.replacingOccurrences(of: " ", with: "").prefix(12)
+        var res = ""
 
-        let trimmedCardNumber = self.cardNumber.filter { $0.isNumber }
-           let lastFourDigits = String(trimmedCardNumber.suffix(4))
-           let maskedDigits = String(repeating: "*", count: trimmedCardNumber.count - 4)
-           
-           var maskedCardNumber = ""
-           var currentIndex = 0
-           
-           for char in cardNumber {
-               if char.isNumber {
-                   if currentIndex < maskedDigits.count {
-                       maskedCardNumber.append(maskedDigits[maskedDigits.index(maskedDigits.startIndex, offsetBy: currentIndex)])
-                       currentIndex += 1
-                   } else {
-                       maskedCardNumber.append(char)
-                   }
-               } else {
-                   maskedCardNumber.append(char)
-               }
-           }
-           
-           return maskedCardNumber
+        splittedCardNumber.forEach({ _ in
+            res.append("*")
+        })
         
-//        let regexPattern = "(?<=.{0}).(?=.*.{4}$)"
-//        return try? self.cardNumber.split(separator: " ").description.masked(matching: regexPattern)
-//
+        res.insert(separator: " ", every: 4)
+        res += lastFour
+
+        return res
+
+
     }
 }
 
@@ -98,7 +87,6 @@ extension CardModel {
     static func generateRandomCardNumber() -> String {
         var cardNumber = ""
         let digitsPerGroup = [4, 4, 4, 4] // Number of digits in each group
-        
         
         for (index, digits) in digitsPerGroup.enumerated() {
             for _ in 0..<digits {
@@ -110,7 +98,11 @@ extension CardModel {
             }
         }
         
-        print("AAAAA", cardNumber)
         return cardNumber
     }
 }
+
+
+
+
+

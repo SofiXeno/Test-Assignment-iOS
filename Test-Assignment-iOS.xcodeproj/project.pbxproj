@@ -14,14 +14,12 @@
 		FAC89D3C2A7A851900F54090 /* Test_Assignment_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D3A2A7A851900F54090 /* Test_Assignment_iOS.xcdatamodeld */; };
 		FAC89D3E2A7A851C00F54090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC89D3D2A7A851C00F54090 /* Assets.xcassets */; };
 		FAC89D412A7A851C00F54090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC89D3F2A7A851C00F54090 /* LaunchScreen.storyboard */; };
-		FAC89D4B2A7A85E300F54090 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FAC89D4A2A7A85E300F54090 /* .gitignore */; };
 		FAC89D512A7A87F200F54090 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D502A7A87F200F54090 /* CoreDataManager.swift */; };
 		FAC89D572A7A88D500F54090 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D562A7A88D500F54090 /* Coordinator.swift */; };
 		FAC89D5C2A7A8AFF00F54090 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D5B2A7A8AFF00F54090 /* CardModel.swift */; };
 		FAC89D5E2A7A8D3F00F54090 /* UIColor + hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D5D2A7A8D3F00F54090 /* UIColor + hex.swift */; };
-		FAC89D602A7A906300F54090 /* Date + timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D5F2A7A906300F54090 /* Date + timestamp.swift */; };
 		FAC89D632A7A91CC00F54090 /* MainCardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D622A7A91CC00F54090 /* MainCardsTableViewCell.swift */; };
-		FAC89D652A7A98DB00F54090 /* String + asterisk masked.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D642A7A98DB00F54090 /* String + asterisk masked.swift */; };
+		FAC89D652A7A98DB00F54090 /* StringProtocol + range replacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D642A7A98DB00F54090 /* StringProtocol + range replacement.swift */; };
 		FAC89D672A7A997000F54090 /* CardNumberEncryptorDecryptorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D662A7A997000F54090 /* CardNumberEncryptorDecryptorManager.swift */; };
 		FAC89D6A2A7A9E9500F54090 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D682A7A9E9500F54090 /* Card+CoreDataClass.swift */; };
 		FAC89D6B2A7A9E9500F54090 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D692A7A9E9500F54090 /* Card+CoreDataProperties.swift */; };
@@ -29,6 +27,7 @@
 		FAC89D6F2A7AA88100F54090 /* UINavigationBar + style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D6E2A7AA88100F54090 /* UINavigationBar + style.swift */; };
 		FAC89D712A7ABA7800F54090 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D702A7ABA7700F54090 /* CustomNavigationController.swift */; };
 		FAC89D732A7ACBAE00F54090 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D722A7ACBAE00F54090 /* CardDetailsViewController.swift */; };
+		FAC89D7F2A7B1A4500F54090 /* Collections + limited sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D7E2A7B1A4500F54090 /* Collections + limited sequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,14 +42,12 @@
 		FAC89D3D2A7A851C00F54090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC89D402A7A851C00F54090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC89D422A7A851C00F54090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAC89D4A2A7A85E300F54090 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FAC89D502A7A87F200F54090 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FAC89D562A7A88D500F54090 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FAC89D5B2A7A8AFF00F54090 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		FAC89D5D2A7A8D3F00F54090 /* UIColor + hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + hex.swift"; sourceTree = "<group>"; };
-		FAC89D5F2A7A906300F54090 /* Date + timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + timestamp.swift"; sourceTree = "<group>"; };
 		FAC89D622A7A91CC00F54090 /* MainCardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardsTableViewCell.swift; sourceTree = "<group>"; };
-		FAC89D642A7A98DB00F54090 /* String + asterisk masked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + asterisk masked.swift"; sourceTree = "<group>"; };
+		FAC89D642A7A98DB00F54090 /* StringProtocol + range replacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol + range replacement.swift"; sourceTree = "<group>"; };
 		FAC89D662A7A997000F54090 /* CardNumberEncryptorDecryptorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNumberEncryptorDecryptorManager.swift; sourceTree = "<group>"; };
 		FAC89D682A7A9E9500F54090 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FAC89D692A7A9E9500F54090 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -58,6 +55,7 @@
 		FAC89D6E2A7AA88100F54090 /* UINavigationBar + style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar + style.swift"; sourceTree = "<group>"; };
 		FAC89D702A7ABA7700F54090 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		FAC89D722A7ACBAE00F54090 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
+		FAC89D7E2A7B1A4500F54090 /* Collections + limited sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collections + limited sequence.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,16 +108,15 @@
 		FAC89D302A7A851900F54090 /* Test-Assignment-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FAC89D5A2A7A8A1100F54090 /* Sources */,
-				FAC89D542A7A889C00F54090 /* Utilities */,
+				FAC89D4C2A7A877200F54090 /* App */,
 				FAC89D532A7A887900F54090 /* Navigation */,
-				FAC89D522A7A887000F54090 /* Views */,
-				FAC89D4F2A7A87DB00F54090 /* Models */,
 				FAC89D4E2A7A879700F54090 /* Managers */,
 				FAC89D4D2A7A877E00F54090 /* Data Storage  */,
-				FAC89D4C2A7A877200F54090 /* App */,
+				FAC89D4F2A7A87DB00F54090 /* Models */,
+				FAC89D5A2A7A8A1100F54090 /* Sources */,
+				FAC89D542A7A889C00F54090 /* Utilities */,
+				FAC89D522A7A887000F54090 /* Views */,
 				FAC89D422A7A851C00F54090 /* Info.plist */,
-				FAC89D4A2A7A85E300F54090 /* .gitignore */,
 			);
 			path = "Test-Assignment-iOS";
 			sourceTree = "<group>";
@@ -192,9 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				FAC89D5D2A7A8D3F00F54090 /* UIColor + hex.swift */,
-				FAC89D5F2A7A906300F54090 /* Date + timestamp.swift */,
-				FAC89D642A7A98DB00F54090 /* String + asterisk masked.swift */,
+				FAC89D642A7A98DB00F54090 /* StringProtocol + range replacement.swift */,
 				FAC89D6E2A7AA88100F54090 /* UINavigationBar + style.swift */,
+				FAC89D7E2A7B1A4500F54090 /* Collections + limited sequence.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC89D4B2A7A85E300F54090 /* .gitignore in Resources */,
 				FAC89D412A7A851C00F54090 /* LaunchScreen.storyboard in Resources */,
 				FAC89D3E2A7A851C00F54090 /* Assets.xcassets in Resources */,
 			);
@@ -349,7 +345,7 @@
 			files = (
 				FAC89D6D2A7AA2AB00F54090 /* SavedCardsManager.swift in Sources */,
 				FAC89D732A7ACBAE00F54090 /* CardDetailsViewController.swift in Sources */,
-				FAC89D602A7A906300F54090 /* Date + timestamp.swift in Sources */,
+				FAC89D7F2A7B1A4500F54090 /* Collections + limited sequence.swift in Sources */,
 				FAC89D6B2A7A9E9500F54090 /* Card+CoreDataProperties.swift in Sources */,
 				FAC89D3C2A7A851900F54090 /* Test_Assignment_iOS.xcdatamodeld in Sources */,
 				FAC89D362A7A851900F54090 /* AllCardsViewController.swift in Sources */,
@@ -357,7 +353,7 @@
 				FAC89D672A7A997000F54090 /* CardNumberEncryptorDecryptorManager.swift in Sources */,
 				FAC89D6F2A7AA88100F54090 /* UINavigationBar + style.swift in Sources */,
 				FAC89D5E2A7A8D3F00F54090 /* UIColor + hex.swift in Sources */,
-				FAC89D652A7A98DB00F54090 /* String + asterisk masked.swift in Sources */,
+				FAC89D652A7A98DB00F54090 /* StringProtocol + range replacement.swift in Sources */,
 				FAC89D5C2A7A8AFF00F54090 /* CardModel.swift in Sources */,
 				FAC89D632A7A91CC00F54090 /* MainCardsTableViewCell.swift in Sources */,
 				FAC89D322A7A851900F54090 /* AppDelegate.swift in Sources */,

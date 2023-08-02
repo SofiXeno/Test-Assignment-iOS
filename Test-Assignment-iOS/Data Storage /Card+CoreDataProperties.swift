@@ -33,7 +33,7 @@ extension Card : Identifiable {
     
     func changeFromCardModel(cardModel: CardModel){
 
-        var encryptedCardNumb = CardNumberEncryptorDecryptorManager.shared.encryptString(string: cardModel.cardNumber, encryptionKey: CardNumberEncryptorDecryptorManager.shared.cryptoKey)
+        let encryptedCardNumb = CardNumberEncryptorDecryptorManager.shared.encryptString(string: cardModel.cardNumber, encryptionKey: CardNumberEncryptorDecryptorManager.shared.cryptoKey)
         
         guard let cardType = cardModel.cardType else { return }
         

@@ -12,7 +12,7 @@ import RNCryptor
 final class CardNumberEncryptorDecryptorManager {
     
     static let shared = CardNumberEncryptorDecryptorManager()
-    var cryptoKey : String = "kadbvakj*^#!!)E*E@~!@)#~#~"
+    var cryptoKey : String = "kadbvakj*^#!!)E*E@~!@)#~#~" //of course need to be changed and rethinked for more serious projects :)
     
     
     func encryptString(string: String, encryptionKey: String) -> String {
@@ -34,8 +34,5 @@ final class CardNumberEncryptorDecryptorManager {
 
          return decryptedString
      }
-    
-
-
     
 }

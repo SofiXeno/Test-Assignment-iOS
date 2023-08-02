@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK: - UINavigationBar + sizeThatFits
 extension UINavigationBar {
-    
     override open func sizeThatFits(_ size: CGSize) -> CGSize { CGSize(width: self.frame.size.width, height: size.height) }
 }

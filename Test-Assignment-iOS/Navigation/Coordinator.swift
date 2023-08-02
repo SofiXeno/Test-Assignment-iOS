@@ -69,24 +69,18 @@ protocol ControllerHasParams {
 
 //MARK: - UIViewControllerWithCoordinator
 extension UIViewControllerWithCoordinator {
+    
     @objc func goBack(){
         guard let coordinator = self.coordinator else { return }
         coordinator.goBack()
     }
     
-//    func setUpNavBarBackBtn(){
-//
-//        let image = UIImage(named:"arrow-back")!.withRenderingMode(.alwaysOriginal)
-//
-//        let menuBtn = UIButton(type: .custom)
-//        menuBtn.frame = CGRect(x: 0.0, y: 0.0, width: 50, height: 50)
-//        menuBtn.setImage(image, for: .normal)
-//        menuBtn.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-//
-//        let menuBarItem = UIBarButtonItem(customView: menuBtn)
-//        self.navigationItem.leftBarButtonItem = menuBarItem
-//
-//    }
+    func setUpNavBarBackBtn(text: String){
+ 
+        let backItem = UIBarButtonItem(title: text, style: .plain, target: nil, action: #selector(self.goBack))
+        self.navigationItem.backBarButtonItem = backItem
+ 
+    }
     
     func setUpRightNavBarItem(menuBtn: UIButton, selector: Selector){
    
@@ -95,6 +89,7 @@ extension UIViewControllerWithCoordinator {
     
         let menuBarItem = UIBarButtonItem(customView: menuBtn)
         self.navigationItem.rightBarButtonItem = menuBarItem
+        
         
     }
     
@@ -106,17 +101,17 @@ extension UIViewControllerWithCoordinator {
         label.textColor = .black
         label.textAlignment = .center
         label.text = text
-        
-    
+        self.navigationItem.title = text
+
         titleView.addSubview(label)
-        
+
         label.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview()
         }
-    
+
         self.navigationItem.titleView = titleView
-  
+
     }
     
     

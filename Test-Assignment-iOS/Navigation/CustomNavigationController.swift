@@ -10,15 +10,19 @@ import UIKit
 
 final class CustomNavigationController: UINavigationController {
     
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configure()
     }
+ 
+}
+
+extension CustomNavigationController {
     
     
+    //MARK: - for status bar
     func configure(){
-        
-  
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundEffect = .none
@@ -38,8 +42,10 @@ final class CustomNavigationController: UINavigationController {
         
     }
     
+    //MARK: - for status bar
     override var childForStatusBarStyle: UIViewController? {
         return self.topViewController
     }
+    
     
 }

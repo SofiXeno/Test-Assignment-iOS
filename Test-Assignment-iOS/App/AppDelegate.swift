@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         if #unavailable(iOS 13) {
-            self.window = UIApplication.shared.windows.first
+            self.window =  UIWindow(frame: UIScreen.main.bounds)
             
             let initialViewController = CustomNavigationController()
             

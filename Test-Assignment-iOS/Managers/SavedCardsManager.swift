@@ -12,20 +12,13 @@ final class SavedCardsManager : CoreDataManager<Card>{
     
     // MARK: - Singleton
     static let shared = SavedCardsManager()
-    
-//    func saveAllEvents(allEvents: [EventModel]){
-//        allEvents.forEach({self.saveEvent(event: $0)})
-//    }
-    
+
     // MARK: - save new Card
     func saveCard(cardModel: CardModel){
 
-      //  let fetchRequest: NSFetchRequest<Card> = Card.fetchRequest()
- 
-        // Create a new match object and set its properties
+        // Create a new card object and set its properties
         let entity = NSEntityDescription.entity(forEntityName: Card.entityName, in: context)!
         let card = Card(entity: entity, insertInto: context)
-          
         card.changeFromCardModel(cardModel: cardModel)
      
     
@@ -38,14 +31,9 @@ final class SavedCardsManager : CoreDataManager<Card>{
     
     // MARK: - convertCardsToModels
     func convertCardsToModels(cardsArray: [NSManagedObject]) -> [CardModel] {
-  
         
         var models: [CardModel] = []
-
-        cardsArray.forEach({
-        
-            models.append(CardModel(card: $0)) })
-    
+        cardsArray.forEach({models.append(CardModel(card: $0))})
         return models
     }
     
