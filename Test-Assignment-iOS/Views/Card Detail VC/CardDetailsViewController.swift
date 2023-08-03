@@ -9,7 +9,6 @@ import UIKit
 import SnapKit
 
 final class CardDetailsViewController: UIViewControllerWithCoordinatorAndParams {
-
     
     // MARK: - Properties
     private lazy var cardTypeImg : UIImageView = {
@@ -51,8 +50,7 @@ final class CardDetailsViewController: UIViewControllerWithCoordinatorAndParams 
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.setUpNavBarBackBtn(text: "SSSSS")
+        
         self.view.backgroundColor = .white
         
         self.configVCFromCardModel()
@@ -64,46 +62,29 @@ final class CardDetailsViewController: UIViewControllerWithCoordinatorAndParams 
         
         self.setUpLayout()
     }
-
+    
+    //MARK: - check device orientation end remake constraints
     override func viewWillLayoutSubviews() {
-      
-
-        print(#function)
-        //self.cardView.snp.removeConstraints()
+        
         self.cardView.snp.remakeConstraints {
             
-            
-            
             if  UIDevice.current.orientation.isLandscape {
-                
-           
-               // $0.height.equalToSuperview().multipliedBy(0.7)
                 $0.leading.lessThanOrEqualToSuperview().offset(UIScreen.main.bounds.height < 390 ? 100 : 250)
                 $0.trailing.lessThanOrEqualToSuperview().inset(UIScreen.main.bounds.height < 390 ? 100 : 250)
                 $0.height.equalToSuperview().multipliedBy(0.65)
-
+                
             }
             else{
-               // $0.height.equalToSuperview().multipliedBy(0.3)
                 $0.leading.greaterThanOrEqualToSuperview().offset(20)
                 $0.trailing.greaterThanOrEqualToSuperview().inset(20)
                 $0.height.equalToSuperview().multipliedBy(0.3)
-
+                
             }
-            
-            
-           
-
             $0.centerX.centerY.equalTo(self.view.safeAreaLayoutGuide)
-  
-            // $0.width.equalTo(self.cardView.snp.height).multipliedBy(1.5)
-     
             
-            }
         }
-
-
     }
+}
 
 
 // MARK: - set up UI extension
@@ -111,29 +92,21 @@ extension CardDetailsViewController{
     
     func configVCFromCardModel(){
         guard let params = self.params, let card = params["card"] as? CardModel, let maskedNumb = card.maskCardNumberForTable(), let type = card.cardType else {return}
-   
-      
+        
         self.cardNumberLabel.text = String(maskedNumb.suffix(9))
         self.cardTypeImg.image = type.image
         self.cardView.backgroundColor = UIColor(rgb: type.hexColor)
         
-      
+        
     }
     
     func setUpLayout(){
-     
+        
         self.cardView.snp.makeConstraints {
-            // centered X and Y
             $0.centerX.centerY.equalTo(self.view.safeAreaLayoutGuide)
-
             $0.leading.greaterThanOrEqualToSuperview().offset(20)
             $0.trailing.greaterThanOrEqualToSuperview().inset(20)
-
-            
-         //   $0.width.equalTo(self.cardView.snp.height).multipliedBy(1.5)
-    
             $0.height.equalToSuperview().multipliedBy(0.3)
-    
         }
         
         self.cardTypeImg.snp.makeConstraints{
@@ -146,14 +119,12 @@ extension CardDetailsViewController{
         
         self.cardNumberLabel.snp.makeConstraints{
             $0.centerY.equalTo(self.cardTypeImg.snp.centerY)
-           // $0.trailing.equalTo(self.cardTypeImg.snp.leading).inset(-5)
             $0.height.equalTo(50)
             $0.leading.lessThanOrEqualToSuperview().offset(15)
         }
-  
+        
         
         self.bankLabel.snp.makeConstraints{
-           
             $0.bottom.lessThanOrEqualTo(self.cardNumberLabel.snp.top).offset(10)
             $0.top.lessThanOrEqualToSuperview().offset(30)
             $0.height.equalTo(50)

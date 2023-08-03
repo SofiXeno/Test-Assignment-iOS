@@ -15,9 +15,10 @@ final class CustomNavigationController: UINavigationController {
         super.viewDidLoad()
         self.configure()
     }
- 
+    
 }
 
+//MARK: - UI nav bar extensions
 extension CustomNavigationController {
     
     
@@ -27,7 +28,7 @@ extension CustomNavigationController {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundEffect = .none
             appearance.shadowImage = UIImage()
-
+            
             self.navigationBar.standardAppearance = appearance
             self.navigationBar.scrollEdgeAppearance = appearance
             self.navigationBar.compactAppearance = appearance
@@ -36,8 +37,8 @@ extension CustomNavigationController {
             UINavigationBar.appearance().shadowImage = UIImage()
             UINavigationBar.appearance().isTranslucent = true
         }
-      
-
+        
+        
         self.navigationBar.frame.size = self.navigationBar.sizeThatFits(CGSize(width: self.navigationBar.frame.size.width, height: 55))
         
     }

@@ -12,16 +12,15 @@ final class SavedCardsManager : CoreDataManager<Card>{
     
     // MARK: - Singleton
     static let shared = SavedCardsManager()
-
+    
     // MARK: - save new Card
     func saveCard(cardModel: CardModel){
-
+        
         // Create a new card object and set its properties
         let entity = NSEntityDescription.entity(forEntityName: Card.entityName, in: context)!
         let card = Card(entity: entity, insertInto: context)
         card.changeFromCardModel(cardModel: cardModel)
-     
-    
+
         self.saveContext()
         
     }
@@ -35,6 +34,7 @@ final class SavedCardsManager : CoreDataManager<Card>{
         var models: [CardModel] = []
         cardsArray.forEach({models.append(CardModel(card: $0))})
         return models
+        
     }
     
 }

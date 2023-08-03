@@ -11,7 +11,7 @@ import Foundation
 extension Collection {
     
     var pairs: [SubSequence] { .init(unfoldSubSequences(limitedTo: 2)) }
-
+    
     func unfoldSubSequences(limitedTo maxLength: Int) -> UnfoldSequence<SubSequence,Index> {
         sequence(state: startIndex) { start in
             guard start < endIndex else { return nil }
@@ -20,7 +20,7 @@ extension Collection {
             return self[start..<end]
         }
     }
-
+    
     func every(n: Int) -> UnfoldSequence<Element,Index> {
         sequence(state: startIndex) { index in
             guard index < endIndex else { return nil }
@@ -28,5 +28,5 @@ extension Collection {
             return self[index]
         }
     }
-
+    
 }

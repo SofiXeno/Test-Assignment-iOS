@@ -9,13 +9,13 @@ import Foundation
 
 //MARK: - StringProtocol + RangeReplaceableCollection
 extension StringProtocol where Self: RangeReplaceableCollection {
-
+    
     mutating func insert<S: StringProtocol>(separator: S, every n: Int) {
         for index in indices.every(n: n).dropFirst().reversed() {
             insert(contentsOf: separator, at: index)
         }
     }
-
+    
     func inserting<S: StringProtocol>(separator: S, every n: Int) -> Self {
         .init(unfoldSubSequences(limitedTo: n).joined(separator: separator))
     }

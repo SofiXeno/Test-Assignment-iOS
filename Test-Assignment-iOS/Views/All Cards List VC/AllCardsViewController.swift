@@ -9,14 +9,14 @@ import UIKit
 import SnapKit
 
 final class AllCardsViewController: UIViewControllerWithCoordinator {
-
-    var cards : [CardModel] = []
     
+    //MARK: - Properties
+    var cards : [CardModel] = []
     
     private lazy var plusBtn : UIButton = {
         let btn = UIButton()
         btn.layer.backgroundColor = UIColor.clear.cgColor
-      
+        
         if #available(iOS 13.0, *) {
             let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 25, weight: .light, scale: .large)
             btn.setImage(UIImage(systemName: "plus", withConfiguration: imageConfiguration), for: .normal)
@@ -40,12 +40,11 @@ final class AllCardsViewController: UIViewControllerWithCoordinator {
     
     
     @objc func addNewCard(){
-        
         SavedCardsManager.shared.saveCard(cardModel: CardModel())
         self.fetchDataFromDB()
-
     }
     
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,17 +56,17 @@ final class AllCardsViewController: UIViewControllerWithCoordinator {
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
-        
+  
     }
-    
+
+    //MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         self.fetchDataFromDB()
     }
-
+    
 }
 
-
+//MARK: - extension for utilities: layout set up + fetching DB objects
 private extension AllCardsViewController{
     
     func fetchDataFromDB(){
@@ -75,7 +74,6 @@ private extension AllCardsViewController{
             $0.timestamp < $1.timestamp
         })
         
-        print(self.cards)
         self.tableView.reloadData()
         
     }
@@ -113,7 +111,6 @@ extension AllCardsViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) as! MainCardsTableViewCell

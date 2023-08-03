@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E863FF5CC49F83F6C60D9D3B /* Pods_Test_Assignment_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B5FA934A6DD2FA0D7C2ED4E /* Pods_Test_Assignment_iOS.framework */; };
 		FAC89D322A7A851900F54090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D312A7A851900F54090 /* AppDelegate.swift */; };
-		FAC89D342A7A851900F54090 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D332A7A851900F54090 /* SceneDelegate.swift */; };
 		FAC89D362A7A851900F54090 /* AllCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D352A7A851900F54090 /* AllCardsViewController.swift */; };
 		FAC89D3C2A7A851900F54090 /* Test_Assignment_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC89D3A2A7A851900F54090 /* Test_Assignment_iOS.xcdatamodeld */; };
 		FAC89D3E2A7A851C00F54090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC89D3D2A7A851C00F54090 /* Assets.xcassets */; };
@@ -36,7 +35,6 @@
 		F15314F3D92A442269B6C8FC /* Pods-Test-Assignment-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-Assignment-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Test-Assignment-iOS/Pods-Test-Assignment-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FAC89D2E2A7A851900F54090 /* Test-Assignment-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-Assignment-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC89D312A7A851900F54090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAC89D332A7A851900F54090 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAC89D352A7A851900F54090 /* AllCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCardsViewController.swift; sourceTree = "<group>"; };
 		FAC89D3B2A7A851900F54090 /* Test_Assignment_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test_Assignment_iOS.xcdatamodel; sourceTree = "<group>"; };
 		FAC89D3D2A7A851C00F54090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				FAC89D312A7A851900F54090 /* AppDelegate.swift */,
-				FAC89D332A7A851900F54090 /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -163,7 +160,7 @@
 			children = (
 				FAC89D3F2A7A851C00F54090 /* LaunchScreen.storyboard */,
 				FAC89D592A7A89F200F54090 /* Card Detail VC */,
-				FAC89D582A7A89E700F54090 /* All Cards VC */,
+				FAC89D582A7A89E700F54090 /* All Cards List VC */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,13 +193,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FAC89D582A7A89E700F54090 /* All Cards VC */ = {
+		FAC89D582A7A89E700F54090 /* All Cards List VC */ = {
 			isa = PBXGroup;
 			children = (
 				FAC89D612A7A91AF00F54090 /* Table Cell */,
 				FAC89D352A7A851900F54090 /* AllCardsViewController.swift */,
 			);
-			path = "All Cards VC";
+			path = "All Cards List VC";
 			sourceTree = "<group>";
 		};
 		FAC89D592A7A89F200F54090 /* Card Detail VC */ = {
@@ -360,7 +357,6 @@
 				FAC89D512A7A87F200F54090 /* CoreDataManager.swift in Sources */,
 				FAC89D6A2A7A9E9500F54090 /* Card+CoreDataClass.swift in Sources */,
 				FAC89D712A7ABA7800F54090 /* CustomNavigationController.swift in Sources */,
-				FAC89D342A7A851900F54090 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import CoreData
 import UIKit
 
 class CoreDataManager <T: NSManagedObject> {
-
+    
     // MARK: - Properties
     lazy var persistentContainer: NSPersistentContainer = {
         
@@ -25,7 +25,7 @@ class CoreDataManager <T: NSManagedObject> {
     
     // MARK: - Core Data Saving support
     func saveContext () {
-  
+        
         if self.context.hasChanges {
             do {
                 try context.save()
@@ -43,7 +43,7 @@ class CoreDataManager <T: NSManagedObject> {
         
         do {
             let fetchedObjects = try context.fetch(fetchRequest) as? [T]
-     
+            
             return fetchedObjects ?? [T]()
         } catch {
             fatalError("Failed to fetch \(entityName): \(error)")
@@ -59,7 +59,7 @@ class CoreDataManager <T: NSManagedObject> {
     
     // MARK: - delete by some predicate
     func deleteByPredicate(fetchRequest : NSFetchRequest<T>){
-    
+        
         do {
             let results = try self.context.fetch(fetchRequest)
             for result in results {
@@ -69,22 +69,22 @@ class CoreDataManager <T: NSManagedObject> {
         } catch {
             print("Error deleting object: \(error)")
         }
-
+        
     }
     
     // MARK: - clear all data
     func clearAllData(){
         let entityNames = self.persistentContainer.managedObjectModel.entities.compactMap { $0.name }
-            for entityName in entityNames {
+        for entityName in entityNames {
             
-                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
-                let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-                do {
-                    try self.persistentContainer.persistentStoreCoordinator.execute(deleteRequest, with: self.context)
-                } catch let error as NSError {
-                    print("Error: \(error.localizedDescription)")
-                }
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            do {
+                try self.persistentContainer.persistentStoreCoordinator.execute(deleteRequest, with: self.context)
+            } catch let error as NSError {
+                print("Error: \(error.localizedDescription)")
             }
+        }
     }
     
 }

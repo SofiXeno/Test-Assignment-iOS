@@ -36,7 +36,8 @@ final class MainCardsTableViewCell: UITableViewCell {
         lbl.lineBreakMode = .byWordWrapping
         return lbl
     }()
-
+    
+    //MARK: - isSelected
     override var isSelected: Bool {
         didSet {
             self.backView.backgroundColor = isSelected ? .lightGray : .clear
@@ -53,8 +54,7 @@ final class MainCardsTableViewCell: UITableViewCell {
         self.addSubview(self.backView)
         self.backView.addSubview(self.cardTypeImg)
         self.backView.addSubview(self.cardNumberLabel)
-        
-        
+      
         self.setUpLayout()
         
     }

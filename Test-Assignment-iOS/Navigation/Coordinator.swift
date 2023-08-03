@@ -12,10 +12,10 @@ import SnapKit
 
 protocol Coordinator {
     var navigationController: UINavigationController { get set }
-
+    
     func openVCWithoutStoryboard(type: (ControllerHasCoordinator & UIViewController).Type)
     func openVCWithoutStoryboardWithParams(type: UIViewControllerWithCoordinatorAndParams.Type, params: [String : Any])
-
+    
     func goBack()
     
 }
@@ -23,15 +23,15 @@ protocol Coordinator {
 final class AppCoordinator: Coordinator {
     
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
- 
+    
     func goBack() {
         self.navigationController.popViewController(animated: true)
     }
-
+    
     func openVCWithoutStoryboard(type: (UIViewController & ControllerHasCoordinator).Type) {
         var vc = type.init()
         vc.modalPresentationStyle = .fullScreen
@@ -75,18 +75,18 @@ extension UIViewControllerWithCoordinator {
         coordinator.goBack()
     }
     
-    func setUpNavBarBackBtn(text: String){
- 
-        let backItem = UIBarButtonItem(title: text, style: .plain, target: nil, action: #selector(self.goBack))
+    func setUpNavBarBackBtn(){
+        
+        let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: #selector(self.goBack))
         self.navigationItem.backBarButtonItem = backItem
- 
+        
     }
     
     func setUpRightNavBarItem(menuBtn: UIButton, selector: Selector){
-   
+        
         menuBtn.frame = CGRect(x: 0.0, y: 0.0, width: 50, height: 50)
         menuBtn.addTarget(self, action: selector, for: .touchUpInside)
-    
+        
         let menuBarItem = UIBarButtonItem(customView: menuBtn)
         self.navigationItem.rightBarButtonItem = menuBarItem
         
@@ -102,16 +102,16 @@ extension UIViewControllerWithCoordinator {
         label.textAlignment = .center
         label.text = text
         self.navigationItem.title = text
-
+        
         titleView.addSubview(label)
-
+        
         label.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview()
         }
-
+        
         self.navigationItem.titleView = titleView
-
+        
     }
     
     
