@@ -107,13 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				FAC89D4C2A7A877200F54090 /* App */,
+				FAC89D4D2A7A877E00F54090 /* Data Storage  */,
 				FAC89D532A7A887900F54090 /* Navigation */,
 				FAC89D4E2A7A879700F54090 /* Managers */,
-				FAC89D4D2A7A877E00F54090 /* Data Storage  */,
 				FAC89D4F2A7A87DB00F54090 /* Models */,
-				FAC89D5A2A7A8A1100F54090 /* Sources */,
 				FAC89D542A7A889C00F54090 /* Utilities */,
 				FAC89D522A7A887000F54090 /* Views */,
+				FAC89D5A2A7A8A1100F54090 /* Sources */,
 				FAC89D422A7A851C00F54090 /* Info.plist */,
 			);
 			path = "Test-Assignment-iOS";
